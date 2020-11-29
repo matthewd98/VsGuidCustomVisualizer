@@ -36,7 +36,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />	  
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -48,5 +48,13 @@
     <Compile Include="GuidVisualizer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="ReadMe.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>@echo Copying custom Guid visualizer to Visual Studio debugger folder
+: Add xcopy command for any dependency needed by the assembly, e.g. SQL.
+xcopy "$(TargetDir)$(TargetFileName)" "%25homepath%25\Documents\Visual Studio 2019\Visualizers\" /y /c</PostBuildEvent>
+  </PropertyGroup>
 </Project>
