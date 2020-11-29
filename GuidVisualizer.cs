@@ -22,8 +22,8 @@ namespace GuidVisualizer
             NameByGuid = new Dictionary<Guid, string>
             {
                 // Example in-memory data.
-                {new Guid("{DBC4A89B-FB5A-4616-9DC3-211259C8F1F4}"), "Admin user"},
-                {new Guid("{A1F9EA23-3A8D-4239-9DEB-A161941F0A83}"), "Local user"}
+                { new Guid("{DBC4A89B-FB5A-4616-9DC3-211259C8F1F4}"), "Admin user" },
+                { new Guid("{A1F9EA23-3A8D-4239-9DEB-A161941F0A83}"), "Local user" }
             };
         }
 
